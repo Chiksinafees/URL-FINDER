@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import IframeWidget from "./IframeWidget";
 
 const WidgetUrlInput = () => {
+
   const [url, setUrl] = useState("");
   const [seoData, setSeoData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -16,12 +17,10 @@ const WidgetUrlInput = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Your API credentials
     const login = "nafeesahmed01.na@gmail.com";
     const password = "743e3d5abbabb091";
     const cred = btoa(`${login}:${password}`);
 
-    // Request data for the API
     const requestData = [
       {
         url: url,
